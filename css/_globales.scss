@@ -1,0 +1,92 @@
+/* 
+    COLORES
+*/
+$rojo: #fc3a52;
+$negro:#373331;
+$white:#ffffff;
+$negro-footer:#212121;
+$sombra:rgba(55,51,49,0.15);
+
+
+/* 
+    MIXINS
+*/
+
+@mixin logo{
+    width: 142px;
+    height: 23px;
+}
+@mixin mobile-padding{
+    padding:40px 30px 0px 30px;
+}
+
+
+/* 
+
+    Tamaño de textos 
+
+*/
+
+
+@mixin title {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.14;
+    
+}
+@mixin small-text {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.63;
+}
+@mixin  medium-text {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.45;
+    
+}
+
+/* 
+        Botones 
+
+*/
+
+@mixin small-btn {
+    width: 190px;
+    height: 42px;
+    border-radius: 6px;
+}
+@mixin medium-btn {
+    width: 220px;
+    height: 48px;
+    border-radius: 6px;
+}
+@mixin big-btn {
+    width: 540px;
+    height: 55px;
+}
+
+@mixin btn-rojo {
+    background-color: $rojo;
+    color: white;
+}
+@mixin btn-blanco{
+    background-color: white;
+    color: $rojo;
+    border:solid $rojo 2px;
+}
+/* 
+Reset 
+
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    border:none;
+    box-sizing: border-box;
+    @include Raleway;
+    
+}

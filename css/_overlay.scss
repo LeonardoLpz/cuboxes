@@ -1,0 +1,82 @@
+.overlay{
+    position: fixed;
+    top:0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    align-items: center;
+    justify-items: center;
+    
+}
+.overlay__form{
+    display: grid;
+    grid-template-rows: 100px 100px repeat(3, 40px) 50px;
+    grid-row-gap: 20px;
+    
+    background: white;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    max-width: 360px;
+    max-height: 530px;
+    box-shadow: 0 0 20px -5px rgba(55, 51, 49, 0.3);
+    border-radius: 6px  ;
+    @include mobile-padding;
+    text-align: center;
+}
+.form__exit{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    background-image: url('../img/times.svg');
+    background-size: contain;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+.form__title{
+    @include title;
+}
+.form__text{
+    @include medium-text;
+}
+.form__datos{
+    border-bottom: #e3e7f1 solid 2px;
+    outline: none;
+}
+.form__datos:focus{
+    border-bottom: $rojo solid 2px;
+    transform: scaleY(1.1);
+    transition-duration: 300ms;
+}
+.form__btn{
+    @include medium-btn;
+    @include btn-rojo;
+    width: 100%;
+    cursor: pointer;
+}
+.form__btn:hover{
+    @include btn-blanco;
+}
+
+/* 
+
+    OVERLAY DESK
+
+*/
+
+@media screen and (min-width: 1024px){
+    .overlay__form{
+        max-width: 540px;
+        max-height: 512px;
+        grid-template-rows: 45px 60px repeat(3,40px) 55px;
+        padding: 65px;
+        
+    }
+    .form__btn{
+        height: 55px;
+        margin-top: 15px;
+    }
+
+}

@@ -1,0 +1,521 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Raleway:400,500,700&display=swap&subset=latin-ext");
+/* 
+    COLORES
+*/
+/* 
+    MIXINS
+*/
+/* 
+
+    Tamaño de textos 
+
+*/
+/* 
+        Botones 
+
+*/
+/* 
+Reset 
+
+*/
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+/* 
+    MOBILE HEADER 
+*/
+.header {
+  display: grid;
+  grid-gap: 15px;
+  padding: 40px 30px 0px 30px;
+  min-width: 320px;
+  max-width: 1140px;
+}
+
+.header__logo {
+  width: 142px;
+  height: 23px;
+}
+
+.header__logo:hover {
+  transform: scale(1.1);
+  transition-duration: 230ms;
+}
+
+.header__menu {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
+
+.menu__a {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+  cursor: pointer;
+}
+
+.menu__a:hover {
+  color: #fc3a52;
+}
+
+.header__btn {
+  width: 190px;
+  height: 42px;
+  border-radius: 6px;
+  background-color: #fc3a52;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+  padding-top: 3px;
+  cursor: pointer;
+}
+
+.header__btn:hover {
+  background-color: white;
+  color: #fc3a52;
+  border: solid #fc3a52 2px;
+}
+
+/* 
+    TABLET HEADER
+*/
+@media screen and (min-width: 768px) {
+  .header {
+    grid-template-columns: 142px 1fr 190px;
+    grid-column-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .header__logo {
+    align-self: center;
+  }
+
+  .header__menu {
+    grid-template-columns: 109px 55px 60px;
+    grid-column-gap: 30px;
+    justify-items: right;
+    align-self: center;
+    justify-self: right;
+  }
+}
+.cards {
+  padding: 40px 30px 0px 30px;
+  display: grid;
+  justify-content: center;
+  grid-row-gap: 40px;
+}
+
+.cards__div {
+  max-width: 360px;
+  height: 262px;
+  border-radius: 4px;
+  box-shadow: 0 15px 20px -5px rgba(55, 51, 49, 0.15);
+  display: grid;
+  grid-template-rows: 50px 150px;
+  grid-row-gap: 20px;
+  align-content: center;
+  padding: 15px;
+}
+
+.cards__btn {
+  background-color: #fc3a52;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+  cursor: pointer;
+  width: 300px;
+  border-radius: 6px;
+  height: 55px;
+}
+
+.cards__btn:hover {
+  background-color: white;
+  color: #fc3a52;
+  border: solid #fc3a52 2px;
+}
+
+/* 
+    TABLET CARDS
+*/
+@media screen and (min-width: 768px) {
+  .cards__div {
+    max-width: 100%;
+    height: 250px;
+    grid-template-rows: 50px 100px;
+  }
+
+  .cards__btn {
+    width: 540px;
+    height: 55px;
+    justify-self: center;
+  }
+}
+/* 
+
+    MEDIDAS DESK
+
+*/
+@media screen and (min-width: 1024px) {
+  .cards {
+    grid-auto-flow: column;
+    grid-column-gap: 30px;
+    grid-row-gap: 70px;
+    justify-content: center;
+    max-width: 1440px;
+  }
+
+  .cards__div {
+    max-width: 360px;
+  }
+
+  .cards__btn {
+    grid-row: 2;
+    grid-column: 1/4;
+  }
+}
+.section {
+  padding: 40px 30px 0px 30px;
+  display: grid;
+  grid-row-gap: 25px;
+}
+
+.section__title {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.14;
+}
+
+.section__text {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.section__btn {
+  width: 220px;
+  height: 48px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+  background-color: white;
+  color: #fc3a52;
+  border: solid #fc3a52 2px;
+  cursor: pointer;
+}
+
+.section__btn:hover {
+  background-color: #fc3a52;
+  color: white;
+}
+
+.section__figure--segundo {
+  grid-row: 4;
+}
+
+.section__img {
+  width: 250px;
+}
+
+/* 
+    TABLET SECTION
+*/
+@media screen and (min-width: 768px) {
+  .section {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .section__title {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-end;
+  }
+
+  .section__text {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+  }
+
+  .section__btn {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+  }
+
+  .section__figure {
+    grid-column: 2;
+    grid-row: 1/4;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .section__img {
+    width: 362px;
+  }
+
+  .section--segundo {
+    grid-column-gap: 30px;
+  }
+
+  .section__title--segundo,
+.section__text--segundo,
+.section__btn--segundo {
+    grid-column: 2;
+  }
+
+  .section__title--segundo,
+.section__text--segundo {
+    text-align: right;
+  }
+
+  .section__figure--segundo {
+    grid-column: 1;
+  }
+
+  .section__btn--segundo {
+    justify-self: right;
+  }
+}
+/* 
+
+    MEDIDAS DESK
+
+*/
+@media screen and (min-width: 1024px) {
+  .section {
+    grid-row-gap: 20px;
+    grid-template-columns: 360px 653px;
+    grid-template-rows: 142px 95px 50px;
+    height: 710px;
+    overflow: hidden;
+    align-content: center;
+    grid-column-gap: 70px;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section__text {
+    align-self: start;
+  }
+
+  .section__img {
+    width: 653px;
+  }
+
+  .section--segundo {
+    grid-template-columns: 583px 380px;
+    grid-template-rows: 142px 160px 50px;
+    grid-column-gap: 0px;
+  }
+
+  .section__figure--segundo {
+    justify-self: left;
+    width: 653px;
+  }
+
+  .section__img--segundo {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section--segundo {
+    grid-template-columns: 655px 1fr;
+    padding: 0px;
+  }
+
+  .section__img--segundo {
+    width: 100%;
+    position: relative;
+    left: -20px;
+  }
+}
+.footer {
+  background-color: #212121;
+  padding: 40px 30px 0px 30px;
+  margin-top: 50px;
+  display: grid;
+  grid-row-gap: 30px;
+  padding-bottom: 30px;
+}
+
+.footer__logo {
+  width: 142px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.footer__logo:hover {
+  transform: scale(1.1);
+  transition-duration: 230ms;
+}
+
+.footer__linea {
+  width: 90%;
+  border-top: solid rgba(255, 255, 255, 0.479) 0.5px;
+}
+
+.footer__social {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 60px);
+}
+
+.footer__a {
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
+}
+
+.footer__a:hover {
+  color: #fc3a52;
+}
+
+/* 
+    TABLET FOOTER
+*/
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    justify-self: center;
+    grid-column: 1/3;
+  }
+
+  .footer__linea {
+    justify-self: center;
+    grid-column: 1/3;
+  }
+
+  .footer__menu {
+    display: grid;
+    grid-auto-flow: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    grid-template-columns: minmax(max-content, 570px) minmax(max-content, 570px);
+    grid-gap: 5px;
+    grid-row-gap: 20px;
+    justify-content: center;
+  }
+
+  .footer__menu {
+    justify-items: right;
+  }
+
+  .footer__linea {
+    width: 100%;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  align-items: center;
+  justify-items: center;
+}
+
+.overlay__form {
+  display: grid;
+  grid-template-rows: 100px 100px repeat(3, 40px) 50px;
+  grid-row-gap: 20px;
+  background: white;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  max-width: 360px;
+  max-height: 530px;
+  box-shadow: 0 0 20px -5px rgba(55, 51, 49, 0.3);
+  border-radius: 6px;
+  padding: 40px 30px 0px 30px;
+  text-align: center;
+}
+
+.form__exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-image: url("../img/times.svg");
+  background-size: contain;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.form__title {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.14;
+}
+
+.form__text {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.form__datos {
+  border-bottom: #e3e7f1 solid 2px;
+  outline: none;
+}
+
+.form__datos:focus {
+  border-bottom: #fc3a52 solid 2px;
+  transform: scaleY(1.1);
+  transition-duration: 300ms;
+}
+
+.form__btn {
+  width: 220px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #fc3a52;
+  color: white;
+  width: 100%;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  background-color: white;
+  color: #fc3a52;
+  border: solid #fc3a52 2px;
+}
+
+/* 
+
+    OVERLAY DESK
+
+*/
+@media screen and (min-width: 1024px) {
+  .overlay__form {
+    max-width: 540px;
+    max-height: 512px;
+    grid-template-rows: 45px 60px repeat(3, 40px) 55px;
+    padding: 65px;
+  }
+
+  .form__btn {
+    height: 55px;
+    margin-top: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

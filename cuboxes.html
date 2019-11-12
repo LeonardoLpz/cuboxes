@@ -4,19 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>Cuboxes</title>
 </head>
 <body>
-    <header>
-        <nav>   
-            <img src="" alt="logo_cuboxes">
-            <ul>
-                <li><a href="">Características</a></li>
-                <li><a href="">Precios</a></li>
-                <li><a href="">Soporte</a></li>
-                <input type="button" value="Quiero ser Cuboxer">
-            </ul>
-        </nav>
+    <header class="header">
+        <img src="img/logo.svg" alt="logo_cuboxes" class="header__logo">  
+        <ul class="header__menu">
+            <li><a href="" class="menu__a menu__a--active">Características</a></li>
+            <li><a href="" class="menu__a menu__a--active">Precios</a></li>
+            <li><a href="" class="menu__a menu__a--active">Soporte</a></li>
+            
+        </ul>
+        <input type="button" value="Quiero ser Cuboxer" class="header__btn header__btn--active">
     </header>
+    <section class="section">
+        <h1 class="section__title">Todas tus Suscripciones en una sola Caja</h1>
+        <p class="section__text">Administra todas tus suscripciones desde un solo lugar y paga solo un envío por todas.</p>
+        <input type="button" value="Quiero saber más" class="section__btn">
+        <figure class="section__figure">
+            <img src="img/image.svg" alt="img_cuboxes" class="section__img">
+        </figure>
+    </section>
+    <section class="cards">   
+        <div class="cards__div">
+           <img src="img/icon-time.svg" alt="ico_time" class="cards__img">
+           <p class="cards__p"><strong>Ahorra tiempo</strong> al gestionar todas tus suscripciones en un solo lugar.Deja que el menu simplificado de Cuboxes haga el trabajo duro por ti.</p>
+        </div>
+        <div class="cards__div">
+            <img src="img/icon-billing.svg" alt="ico_billing" class="cards__img">
+            <p class="cards__p"><strong>Un solo</strong> cargo al pagar en Cuboxes todas tus suscripciones se aplican en un solo cargo, no mas suscribciones duplicadas ni olvidadas.</p>
+        </div>
+        <div class="cards__div">
+            <img src="img/icon-shipping.svg" alt="ico_shipping" class="cards__img">
+            <p class="cards__p"> <strong>Paga un</strong> solo envío al hacer tus suscripciones con Cuboxes, puedes hacer que todas te lleguen al mismo tiempo, evitando pagar envíos adicionales.</p>
+        </div>
+        <input type="button" value="Quiero aplicar para ser un Cuboxer" class="cards__btn" onclick="showOverlay()">
+
+    </section>
+    <section class="section section--segundo">
+        <figure class="section__figure section__figure--segundo">
+            <img src="img/image1.svg" alt="img_cuboxes" class="section__img section__img--segundo">
+
+        </figure>
+        <h2 class="section__title section__title--segundo">Invierte tu tiempo en cosas más importantes</h2>
+        <p class="section__text section__text--segundo">Cuboxes agiliza la administración de tus recurrencias, haciendote una sola factura y un solo envío para que no tengas que preocuparte por nada mas.</p>
+        <input type="button" value="Quiero ser Cuboxer" class="section__btn section__btn--segundo">
+    </section>
+    <footer class="footer">
+        <img src="img/logo-white.svg" alt="logo" class="footer__logo">
+        <div class="footer__linea"></div>
+        <div class="footer__social">
+            <a href="#" class="social__a"><img src="img/facebook-f.svg" alt="" class="a__facebook"></a>
+            <a href="#" class="social__a"><img src="img/twitter.svg" alt="" class="a__twitter"></a>
+            <a href="#" class="social__a"><img src="img/slack-hash.svg" alt="" class="a__slack"></a>
+        </div>
+        <ul class="footer__menu">
+                <li><a href="#" class="footer__a">Aviso de privacidad</a></li>
+                <li><a href="#" class="footer__a">Soporte</a></li>
+                <li><a href="#" class="footer__a">Términos y Condiciones</a></li>            
+        </ul>
+        
+    </footer>
+    <div class="overlay">
+        <form action="" class="overlay__form">
+            <div class="form__exit" onclick="exitOverlay()"></div>
+            <h1 class="form__title">Quiero ser Cuboxer</h1>
+            <p class="form__text">Llena el siguiente formulario y en breve un agente se pondrá en contacto.</p>
+            <input type="email" name="email" placeholder="Email" class="form__datos form__datos--email">
+            <input type="text" name="nombre" class="form__datos form__datos--nombre" placeholder="Nombre" >
+            <input type="tel" name="tel" class="form__datos form__datos--tel" placeholder="Teléfono">
+            <input type="button" value="Enviar solicitud" class="form__btn" onclick="obtenerDatos()">
+    
+       </form>
+    </div>
+   <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,143 @@
+
+
+.section{
+    @include mobile-padding;
+    display:grid;
+    grid-row-gap:25px;
+}
+.section__title{
+    @include title;
+
+}
+.section__text{
+    @include medium-text;
+}
+
+.section__btn{
+    @include medium-btn;
+    @include small-text;
+    @include btn-blanco;
+    cursor: pointer;
+}
+.section__btn:hover{
+    @include btn-rojo;
+
+}
+
+.section__figure--segundo{
+    grid-row: 4;
+}
+.section__img{
+    width:250px;
+    
+}
+
+
+
+/* 
+    TABLET SECTION
+*/
+@media screen and (min-width: 768px){
+    .section{
+        grid-template-columns: 1fr 2fr;
+        
+    }
+    .section__title{
+        grid-column: 1;
+        grid-row: 1;
+        align-self: flex-end;
+    }
+    .section__text{
+        grid-column: 1;
+        grid-row: 2;
+        align-self: center;
+
+    }
+    .section__btn{
+        grid-column: 1;
+        grid-row: 3;
+        align-self: start;
+    }
+    .section__figure{
+        grid-column: 2;
+        grid-row: 1/4;
+        align-self: center;
+        justify-self: center;
+    }
+    .section__img{
+        width: 362px;
+    }
+    .section--segundo{
+        grid-column-gap: 30px;
+    }
+    .section__title--segundo,
+    .section__text--segundo,
+    .section__btn--segundo{
+        grid-column: 2;
+    }
+    .section__title--segundo,
+    .section__text--segundo{
+        text-align: right;
+    }
+    .section__figure--segundo{
+        grid-column: 1;
+    }
+    .section__btn--segundo{
+        justify-self: right;
+    }
+}
+
+
+
+/* 
+
+    MEDIDAS DESK
+
+*/
+
+@media screen and (min-width: 1024px){
+    .section{
+        grid-row-gap:20px ;
+        grid-template-columns:360px 653px;
+        grid-template-rows: 142px 95px 50px;
+        height: 710px;
+        overflow: hidden;
+        align-content: center;
+        grid-column-gap: 70px;
+        max-width: 1140px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .section__text{
+        align-self: start;
+    }
+    .section__img{
+        width: 653px;
+    }
+    .section--segundo{
+        grid-template-columns: 583px 380px;
+        grid-template-rows: 142px 160px 50px;
+        grid-column-gap: 0px;
+    }
+    .section__figure--segundo{
+        justify-self: left;
+        width: 653px;
+    }
+    .section__img--segundo{
+        width: 80%;
+    }
+}
+
+
+@media screen and (min-width: 1280px){
+    .section--segundo{
+        grid-template-columns: 655px 1fr;
+        padding: 0px;
+    }    
+    .section__img--segundo{
+        width: 100%;
+        position: relative;
+        left: -20px;
+    }
+}

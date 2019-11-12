@@ -1,0 +1,69 @@
+/* 
+    MOBILE HEADER 
+*/
+
+.header{
+    display: grid;
+    grid-gap: 15px;
+    @include mobile-padding;
+    min-width: 320px;
+    max-width: 1140px;
+   
+}
+.header__logo{
+    @include logo;
+}
+.header__logo:hover{
+    transform: scale(1.1);
+    transition-duration: 230ms;
+
+}
+.header__menu{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+.menu__a{
+    @include small-text;
+    cursor: pointer;
+}
+.menu__a:hover{
+    color: $rojo;
+}
+.header__btn{
+    @include small-btn;
+    @include btn-rojo;
+    @include small-text;
+    padding-top:3px ;
+    cursor: pointer;
+}   
+.header__btn:hover{
+    @include btn-blanco;
+}
+/* 
+    TABLET HEADER
+*/
+@media screen and (min-width: 768px){
+    .header{
+        grid-template-columns:142px 1fr 190px ;
+        grid-column-gap: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .header__logo{
+        align-self: center;
+    }
+    .header__menu{
+        grid-template-columns: 109px 55px 60px;
+        grid-column-gap: 30px;
+        justify-items: right;
+        align-self: center;
+        justify-self: right;
+        
+    }
+}
+
+
+
+
